@@ -1,3 +1,3 @@
 # Teaching Kit Experiments
 
-	// blurb to come
+Some experiment into lowering the barrier to webmaker.org/teach kit creation
