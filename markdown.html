@@ -65,65 +65,35 @@ Need help? Start here: http://mzl.la/teachingkit-tips
 
 <!-- =============================== -->
 <!-- DESCRIPTION -->
-      <section>
-        <h1>Description</h1>
-        <div>
-          <p>What is your teaching kit all about? What does it help people make or learn? What was your inspiration for creating it?</p>
-        </div>
-      </section>
-<!-- =============================== -->
-      
-<!-- =============================== -->
-<!-- LEARNING OBJECTIVES -->
-        <section>
-          <h1>Learning objectives</h1>
-          <p>What specific skills will participants learn? What new knowledge will they come away with? You might want to list these individually, like this:</p>
-          <ul>
-            <li>Skill 1</li>
-            <li>Skill 2</li>
-            <li>Skill 3</li>
-          </ul>
-          <p>
-            Not sure? Have a look at our new <a href="https://wiki.mozilla.org/Learning/WebLiteracyStandard">Web 
-            Literacy Standard</a>.
-          </p>
-        </section>
-<!-- =============================== -->
+      <section class="markdown">
+        # Description
+        What is your teaching kit all about? What does it help people make or learn? What was your inspiration for creating it?
+        
+          The markdown mod's still allow for code, it just removes the indentation to the same level as that of the first line.
+        
+        # Learning objectives
+        What specific skills will participants learn? What new knowledge will they come away with? You might want to list these individually, like this:
+        
+        * Skill 1
+        * Skill 2
+        * Skill 3
 
-<!-- =============================== -->
-<!-- WHAT YOU'LL MAKE TOGETHER -->
-        <section>
-          <h1>What you'll make together</h1>
-          <p>
-            What will participants make? What's the end result or finished product? A web page? Video?
-            Paper prototype? Dancing robots? :)
-          </p>
-        </section>
-<!-- =============================== -->
+        Not sure? Have a look at our new [Web Literacy Standard](https://wiki.mozilla.org/Learning/WebLiteracyStandard).
 
-<!-- =============================== -->
-<!-- PREPARATION -->  
-      <section>
-        <h1>Preparation</h1>
-        <p>
-          Are any special materials required? What tools will participants need? Should anything be set up 
-          in advance? Is there any software to install, or specific technical requirements?
-        </p>
-      </section>
-<!-- =============================== -->
-      
-<!-- =============================== -->
-<!-- REVIEW & ASSESSMENT -->
-      <section>
-        <h1>Assessment and review</h1>
-        How can participants assess and reflect on their work once it's complete?
-        Feel free to add here if you have suggestions for...
-         <ul>
-          <li><strong>Discussion questions</strong>. Any suggested topics or questions for follow-up discussion?</li>
-          <li><strong>Assessment</strong>. Is there a specific standard or rubric you'd suggest using? 
-          Are there ways learners can assess each others' work? (Peer assessment?)</li>
-          <li><strong>Sharing</strong>. What are some good ways participants can publish and share what they made?</li>
-        </ul>
+        # What you'll make together
+        What will participants make? What's the end result or finished product? A web page? Video? Paper prototype? Dancing robots? :)
+
+        # Preparation
+        Are any special materials required? What tools will participants need? Should anything be set up in advance? Is there any software to install, or specific technical requirements?
+
+        # Assessment and review
+        How can participants assess and reflect on their work once it's complete? Feel free to add here if you have suggestions for...
+
+        * Discussion questions. Any suggested topics or questions for follow-up discussion?
+        * Assessment. Is there a specific standard or rubric you'd suggest using? Are there ways learners can assess each others' work? (Peer assessment?)
+        * Sharing. What are some good ways participants can publish and share what they made?
+
+
       </section>
 <!-- =============================== -->
       
@@ -198,5 +168,16 @@ Help others know what skills and competencies your teaching kit helps teach by t
 
   </div>
 </div>
-
+<script src="//cdnjs.cloudflare.com/ajax/libs/showdown/0.3.1/showdown.min.js"></script>
+  <script>
+    var converter = new Showdown.converter();
+    var regex = new RegExp("^[ \t\r\n]+");
+    Array.prototype.filter.call(document.querySelectorAll('.markdown'), function(element){
+      var markdown = element.innerHTML;
+      var mdPadding = regex.exec(markdown);
+      mdPadding = mdPadding[0].replace('\n', '');
+      markdown = markdown.replace('\n'+mdPadding, '\n', 'gi');
+      element.innerHTML = converter.makeHtml(markdown);
+    });
+  </script>
 </body></html>
