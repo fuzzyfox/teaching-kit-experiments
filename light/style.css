@@ -95,7 +95,8 @@ header > hgroup a {
 header a {
   text-decoration: underline;
 }
-main {
+main,
+#main {
   padding: 0 0 0 125px;
   vertical-align: top;
   width: 525px;
@@ -104,7 +105,8 @@ main {
   font-size: 15px;
   line-height: 1.5;
 }
-main > h1 {
+main > h1,
+#main > h1 {
   font-size: 28px;
   color: #00be7a;
   font-weight: 300;
