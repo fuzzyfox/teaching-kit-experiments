@@ -1,0 +1,217 @@
+html {
+  font: 15px 'Open Sans', 'Helvetica Neue', Helvetica, Arial, Sans-Serif;
+  color: #4c4c4c;
+  background: #2aabe1;
+}
+body {
+  width: 1020px;
+  margin: 20px auto 40px;
+  background: #fff;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  box-shadow: 0 3px 3px -2px rgba(0,0,0,0.2);
+  padding-bottom: 40px;
+}
+a {
+  color: #27aae1;
+  text-decoration: none;
+}
+a:hover {
+  color: #0092cf;
+  text-decoration: underline;
+}
+li {
+  margin: 5px 0 5px;
+}
+h1 {
+  font-size: 20px;
+  font-weight: 300;
+  margin-top: 0;
+}
+section {
+  margin-bottom: 40px;
+}
+header {
+  margin: 0 auto;
+  position: relative;
+  color: #fff;
+  background: #3fb58e;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  box-sizing: border-box;
+  overflow: hidden;
+  min-height: 230px;
+  display: flex;
+  align-items: center;
+}
+header #kit-ribbon {
+  position: absolute;
+  top: 30px;
+  left: -60px;
+  text-align: center;
+  width: 200px;
+  color: #686868;
+  background: #ffcd36;
+  font-size: 18px;
+  padding: 10px;
+  transform: rotate(-45deg);
+  z-index: 1;
+}
+header #header-image {
+  display: inline-block;
+  position: relative;
+  width: 180px;
+  height: 180px;
+  border-radius: 100%;
+  left: 45px;
+  z-index: 0;
+}
+header > hgroup {
+  width: 650px;
+  position: relative;
+  left: 70px;
+  margin: 40px 0;
+}
+header > hgroup h1 {
+  margin: 0;
+  font-size: 40px;
+  font-weight: 300;
+  line-height: 1.2;
+}
+header > hgroup h2 {
+  margin: 7px 0 0;
+  font-size: 18px;
+  font-weight: 300;
+}
+header > hgroup p#made-by {
+  font-size: 15px;
+  margin-bottom: 0;
+}
+header > hgroup a {
+  color: inherit;
+}
+header a {
+  text-decoration: underline;
+}
+main {
+  padding: 0 0 0 125px;
+  vertical-align: top;
+  width: 525px;
+  display: inline-block;
+  box-sizing: border-box;
+  font-size: 15px;
+  line-height: 1.5;
+}
+main > h1 {
+  font-size: 28px;
+  color: #00be7a;
+  font-weight: 300;
+  line-height: 1;
+  margin-top: 40px;
+}
+aside {
+  padding: 45px 105px 0 20px;
+  vertical-align: top;
+  width: 240px;
+  display: inline-block;
+  box-sizing: border-box;
+}
+.agenda {
+  overflow: hidden;
+  position: relative;
+}
+.agenda ol {
+  font-size: 1.2em;
+  counter-reset: item;
+  padding-left: 10px;
+  background-color: #fff2cc;
+  border-bottom: 1px dotted #ccc;
+  position: relative;
+  margin: 0;
+}
+.agenda ol li {
+  list-style-type: none;
+  border-bottom: 1px dotted #ccc;
+  padding: 10px 10px 10px 0;
+  margin: 0;
+  margin-left: 30px;
+}
+.agenda ol li:last-child {
+  border-bottom: none;
+}
+.agenda ol li::before {
+  position: absolute;
+  left: 17px;
+  font-weight: 600;
+  color: #777;
+  content: counter(item, decimal) ') ';
+  counter-increment: item;
+}
+.agenda ol::before {
+  position: absolute;
+  border-left: 1px solid #ffaa9f;
+  border-right: 1px solid #ffaa9f;
+  width: 2px;
+  height: 100%;
+  float: left;
+  display: inline-block;
+  margin-left: 0px;
+  z-index: 0;
+  content: '';
+}
+.teach-list,
+.resources {
+  overflow: hidden;
+}
+.teach-list ul,
+.resources ul {
+  font-size: 10px;
+  padding-left: 15px;
+}
+.teach-list ul li,
+.resources ul li {
+  margin-bottom: 10px;
+}
+.teach-list ul li a,
+.resources ul li a {
+  font-size: 15px;
+}
+.teach-checklist {
+  padding: 15px 12px;
+  background: #e3eaee;
+  box-sizing: border-box;
+  font-size: 18px;
+  font-weight: 400;
+  border-radius: 5px;
+}
+.teach-checklist > p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.teach-checklist ul {
+  list-style: none;
+  padding-left: 0;
+  font-weight: 300;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.teach-checklist input[type=checkbox] {
+  visibility: hidden;
+  position: absolute;
+}
+.teach-checklist input[type=checkbox] + label::after {
+  position: relative;
+  display: inline-block;
+  font-family: 'FontAwesome';
+  content: '\f096';
+  font-size: 24px;
+  color: #3fb583;
+  margin-right: 13px;
+  width: 15px;
+  top: 4px;
+}
+.teach-checklist input[type=checkbox]:checked + label::after {
+  content: '\f046';
+}
