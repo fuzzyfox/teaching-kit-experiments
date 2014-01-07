@@ -62,9 +62,9 @@
     <div class="teach-checklist">
       <p>Got a check-list of criteria, or things to look for in a great completed project? Feel free to list them here:</p>
       <ul>
-        <li><input id="r1" type="checkbox"><label for="r1"></label> Criteria 1</li>
-        <li><input id="r2" type="checkbox"><label for="r2"></label> Criteria 2</li>
-        <li><input id="r3" type="checkbox"><label for="r3"></label> Criteria 3</li>
+        <li>Criteria 1</li>
+        <li>Criteria 2</li>
+        <li>Criteria 3</li>
       </ul>
     </div>
   </div>
@@ -100,5 +100,12 @@
         </ul>
       </section>
   </aside>
+
+  <script>
+    var teachChecklists = document.querySelectorAll('.teach-checklist li');
+    for(var i = 0, j = teachChecklists.length; i < j; i++){
+      teachChecklists[i].innerHTML = '<input id="r'+i+'" type="checkbox"><label for="r'+i+'"></label> ' + teachChecklists[i].innerHTML;
+    }
+  </script>
 </body>
 </html>
