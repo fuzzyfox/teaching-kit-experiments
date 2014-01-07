@@ -215,3 +215,19 @@ aside {
 .teach-checklist input[type=checkbox]:checked + label::after {
   content: '\f046';
 }
+@media (min-width: 1520px) {
+  body {
+    width: 1520px;
+    margin: 20px auto;
+  }
+  header > hgroup {
+    width: auto;
+    max-width: 1050px;
+  }
+  main {
+    width: 850px;
+  }
+  aside {
+    width: 400px;
+  }
+}
